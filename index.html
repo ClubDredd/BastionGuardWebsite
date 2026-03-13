@@ -99,6 +99,12 @@ body { background: var(--midnight); color: var(--gray300); font-family: var(--fo
   background: linear-gradient(165deg, var(--midnight) 0%, var(--deep-navy) 40%, var(--navy) 100%);
   padding: 120px 24px 80px;
 }
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url("assets/hero-back.jpg") center center / cover no-repeat;
+  opacity: 0.2;
+  pointer-events: none;
+}
 .hero-glow1 {
   position: absolute; top: 10%; right: 5%; width: 500px; height: 500px; border-radius: 50%;
   background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
@@ -415,6 +421,7 @@ body { background: var(--midnight); color: var(--gray300); font-family: var(--fo
 
 <!-- ==================== HERO ==================== -->
 <section class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-glow1"></div>
   <div class="hero-glow2"></div>
   <div class="hero-content">

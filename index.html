@@ -293,6 +293,42 @@ body { background: var(--midnight); color: var(--gray300); font-family: var(--fo
 }
 .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,212,170,0.4); }
 
+/* ---- Team ---- */
+.team-section { background: var(--midnight); }
+.team-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;
+}
+.team-card {
+  background: var(--deep-navy); border: 1px solid var(--navy); border-radius: 16px;
+  padding: 40px 32px; text-align: center; transition: border-color 0.3s, transform 0.3s;
+}
+.team-card:hover { border-color: rgba(0,212,170,0.3); transform: translateY(-4px); }
+.team-photo {
+  width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 24px;
+  background: var(--navy); border: 3px solid var(--accent);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+  position: relative;
+}
+.team-photo img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
+}
+.team-photo-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%;
+}
+.team-photo-placeholder svg { opacity: 0.4; }
+.team-card h3 {
+  font-family: var(--font-display); font-size: 22px; font-weight: 700;
+  color: var(--white); margin: 0 0 4px; letter-spacing: -0.01em;
+}
+.team-role {
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  color: var(--accent); letter-spacing: 0.04em; margin-bottom: 16px;
+}
+.team-bio {
+  font-size: 15px; color: var(--gray300); line-height: 1.7; margin: 0;
+}
+
 /* ---- Footer ---- */
 .site-footer {
   background: var(--deep-navy); border-top: 1px solid var(--navy); padding: 40px 24px;
@@ -309,7 +345,7 @@ body { background: var(--midnight); color: var(--gray300); font-family: var(--fo
 
 /* ---- Responsive ---- */
 @media (max-width: 600px) {
-  .risk-grid, .reasons-grid { grid-template-columns: 1fr; }
+.risk-grid, .reasons-grid, .team-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .timeline-step { gap: 20px; }
   .step-circle { width: 44px; height: 44px; }
@@ -362,6 +398,7 @@ body { background: var(--midnight); color: var(--gray300); font-family: var(--fo
       <a href="#services">Services</a>
       <a href="#approach">How We Work</a>
       <a href="#why-us">Why Bastion Guard</a>
+      <a href="#team">Our Team</a>
       <a href="#contact">Contact</a>
     </div>
     <button class="nav-hamburger" id="nav-toggle" aria-label="Menu">&#9776;</button>
@@ -371,6 +408,7 @@ body { background: var(--midnight); color: var(--gray300); font-family: var(--fo
     <a href="#services">Services</a>
     <a href="#approach">How We Work</a>
     <a href="#why-us">Why Bastion Guard</a>
+    <a href="#team">Our Team</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -594,6 +632,60 @@ body { background: var(--midnight); color: var(--gray300); font-family: var(--fo
   </div>
 </section>
 
+<!-- ==================== TEAM ==================== -->
+<section class="section team-section" id="team">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Leadership</div>
+      <h2 class="section-title">Company Principals</h2>
+      <p class="section-desc">Bastion Guard is led by experienced professionals who bring deep expertise in cybersecurity, technology, and business operations to every client engagement.</p>
+    </div>
+    <div class="team-grid">
+
+      <!-- CEO -->
+      <div class="team-card reveal">
+        <div class="team-photo">
+          <!-- Replace the placeholder below with: <img src="your-ceo-photo.jpg" alt="CEO Name"> -->
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="22" r="10" stroke="#A0AABB" stroke-width="2"/><path d="M10 48c0-9.94 8.06-18 18-18s18 8.06 18 18" stroke="#A0AABB" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <h3>Karlos Ancheta Cubon</h3>
+        <div class="team-role">Chief Executive Officer</div>
+        <p class="team-bio">Karlos is a serial entrepreneur with over a decade of experience building and scaling businesses across technology, advertising, media and entertainment, education, construction, and agriculture. Driven by a vision to create impactful and sustainable ventures, he specializes in identifying opportunities where innovation and practical execution intersect. His mission is to build businesses that not only achieve lasting growth, but also create meaningful value for the industries and communities they serve. With Bastion Guard, he brings that same entrepreneurial mindset and operational discipline to help build a leading cybersecurity advisory firm trusted by healthcare organizations.</p>
+      </div>
+
+      <!-- CTO -->
+      <div class="team-card reveal d1">
+        <div class="team-photo">
+          <!-- Replace the placeholder below with: <img src="your-cto-photo.jpg" alt="CTO Name"> -->
+          <div class="team-photo-placeholder">
+            <!--<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="22" r="10" stroke="#A0AABB" stroke-width="2"/><path d="M10 48c0-9.94 8.06-18 18-18s18 8.06 18 18" stroke="#A0AABB" stroke-width="2" stroke-linecap="round"/></svg>-->
+            <img src="assets/archie-pic.jpg" alt="Archie Timbol">
+          </div>
+        </div>
+        <h3>Archie Timbol</h3>
+        <div class="team-role">Chief Technology Officer</div>
+        <p class="team-bio">With over three decades of IT and cybersecurity experience spanning Cloud, AI, and enterprise risk, Archie has helped shape the security posture of Fortune 500 companies across the United States, Europe, and Australia. He has held principal security roles at industry leaders including Adobe, Microsoft, and Blue Cross, developing and executing security strategies that protect some of the world's most sensitive data. Today, through Bastion Guard, he brings that same depth of expertise to lead Bastion Guard&rsquo;s security practice.</p>
+      </div>
+
+      <!-- Business Development -->
+      <div class="team-card reveal d2">
+        <div class="team-photo">
+          <!-- Replace the placeholder below with: <img src="your-cfo-photo.jpg" alt="CFO Name"> -->
+          <div class="team-photo-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="22" r="10" stroke="#A0AABB" stroke-width="2"/><path d="M10 48c0-9.94 8.06-18 18-18s18 8.06 18 18" stroke="#A0AABB" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <h3>King Anacay</h3>
+        <div class="team-role">Chief Marketing Officer</div>
+        <p class="team-bio">King brings over 15 years of experience as a Medical Language Specialist and Medical Office Services provider. He has supported medical practices across Australia and New Zealand by delivering highly skilled, cost-efficient workforce solutions that improve operational efficiency, enhance patient satisfaction, and streamline clinical and administrative workflows.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ==================== CTA ==================== -->
 <section class="cta-section" id="contact">
   <div class="reveal">
@@ -603,8 +695,8 @@ body { background: var(--midnight); color: var(--gray300); font-family: var(--fo
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 3L5 10V19C5 28.5 11.5 37.2 20 39C28.5 37.2 35 28.5 35 19V10L20 3Z" stroke="#00D4AA" stroke-width="2" fill="none"/><path d="M14 20L18 24L26 16" stroke="#00D4AA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h2>Ready to Strengthen Your Security?</h2>
         <p>Let&rsquo;s start with a conversation. Tell us about your organization, your challenges, and your goals. We&rsquo;ll show you the fastest path to reducing your cyber risk.</p>
-        <a href="mailto:hello@bastionguards.com" class="btn-cta">Contact Us</a>
-        <div class="cta-email">hello@bastionguards.com</div>
+        <a href="mailto:info@bastionguards.com" class="btn-cta">Contact Us</a>
+        <div class="cta-email">info@bastionguards.com</div>
       </div>
     </div>
   </div>
